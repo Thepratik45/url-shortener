@@ -2,16 +2,25 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>URL Shortener</title>
+    <style>
+        body { font-family: Arial; margin: 40px; }
+        input[type=text] { width: 400px; padding: 8px; }
+        input[type=submit] { padding: 8px 16px; }
+        .short-url { margin-top: 20px; font-weight: bold; }
+    </style>
 </head>
 <body>
-    <h2>Enter URL to Shorten</h2>
-    <form action="/shorten" method="post">
-        <input type="text" name="originalUrl" required placeholder="https://example.com" size="50"/>
-        <button type="submit">Shorten</button>
+
+    <h1>Simple URL Shortener</h1>
+    
+    <form method="post" th:action="@{/shorten}">
+        <input type="text" name="originalUrl" placeholder="Enter your original URL" required>
+        <input type="submit" value="Shorten URL">
     </form>
-    <br/>
-    <p th:if="${shortUrl}">
-        Short URL: <a th:href="${shortUrl}" th:text="${shortUrl}" target="_blank"></a>
-    </p>
+
+    <div class="short-url" th:if="${shortUrl}">
+        Shortened URL: <a th:href="${shortUrl}" th:text="${shortUrl}" target="_blank"></a>
+    </div>
+
 </body>
 </html>

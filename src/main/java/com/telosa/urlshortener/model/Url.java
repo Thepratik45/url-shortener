@@ -1,4 +1,4 @@
-package model;
+package com.telosa.urlshortener.model;
 
 public class Url {
     private int id;

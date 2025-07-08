@@ -1,4 +1,4 @@
-package controller;
+package com.telosa.urlshortener.controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -6,7 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import service.UrlService;
+import com.telosa.urlshortener.service.UrlService;
 
 @Controller
 public class UrlController {

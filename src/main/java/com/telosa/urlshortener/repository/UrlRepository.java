@@ -1,9 +1,9 @@
-package repository;
+package com.telosa.urlshortener.repository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import model.Url;
+import com.telosa.urlshortener.model.Url;
 
 @Repository
 public class UrlRepository {
